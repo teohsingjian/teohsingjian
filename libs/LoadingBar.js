@@ -24,7 +24,7 @@ class LoadingBar {
 	  bar.style.width = "0";
 	  bar.style.borderRadius = "10px";
 	  bar.style.height = "100%";
-	  bar.style.transition = "width 0.5s ease"; // Added transition for animation
+	  bar.style.transition = "width 2s ease"; // Added transition for animation
 	  barBase.appendChild(bar);
 	  this.progressBar = bar;
   
