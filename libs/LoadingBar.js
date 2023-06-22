@@ -35,3 +35,4 @@ class LoadingBar{
 			loader.progressBar.style.width = `${progress}%`;
 		}
 	}
+}
