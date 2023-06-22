@@ -188,7 +188,7 @@ class VRButton{
         element.style.borderRadius = '4px';
         element.style.background = (active) ? 'rgba(20,150,80,1)' : 'rgba(180,20,20,1)';
         element.style.color = '#fff';
-        element.style.font = `normal ${fontSize}px sans-serif`;
+        element.style.font = `normal ${fontSize}px ITC Avant Garde Gothic`;
         element.style.textAlign = 'center';
         element.style.opacity = '0.5';
         element.style.outline = 'none';
