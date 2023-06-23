@@ -139,10 +139,6 @@ class App{
                             // Called while loading is progressing
                             function (xhr) {
                                 self.loadingBar.progress = (xhr.loaded / xhr.total);
-                            },
-                            // Called when loading has errors
-                            function (error) {
-                                console.log('An error happened while loading the FBX model');
                             }
                         );
 
