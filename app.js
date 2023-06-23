@@ -104,7 +104,6 @@ class App{
 		loader.load(
 			// resource URL
 			'college.glb',
-            'rover.glb',
 			// called when the resource is loaded
 			function ( gltf ) {
 
