@@ -126,24 +126,24 @@ class App{
                             child.material = mat2;
                             mat1.dispose();
                         }
-					}
-                        // Load the FBX model using the FBXLoader
-                        const fbxLoader = new FBXLoader().setPath(self.assetsPath);
-                        fbxLoader.load(
-                            // FBX model resource URL
-                            'model.fbx',
-                            // Called when the FBX model is loaded
-                            function (fbx) {
-                                // Add the FBX model to the scene
-                                self.scene.add(fbx);
-                            },
-                            // Called while loading is progressing
-                            function (xhr) {
-                                self.loadingBar.progress = (xhr.loaded / xhr.total);
-                            }
-                        );
+                                }
+                                    // Load the FBX model using the FBXLoader
+                                    const fbxLoader = new FBXLoader().setPath(self.assetsPath);
+                                    fbxLoader.load(
+                                        // FBX model resource URL
+                                        'model.fbx',
+                                        // Called when the FBX model is loaded
+                                        function (fbx) {
+                                            // Add the FBX model to the scene
+                                            self.scene.add(fbx);
+                                        },
+                                        // Called while loading is progressing
+                                        function (xhr) {
+                                            self.loadingBar.progress = (xhr.loaded / xhr.total);
+                                        }
+                                    );
 
-                    });
+                                });
                        
                 const door1 = college.getObjectByName("LobbyShop_Door__1_");
                 const door2 = college.getObjectByName("LobbyShop_Door__2_");
