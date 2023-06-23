@@ -96,7 +96,6 @@ class App{
         
 		const loader = new GLTFLoader( ).setPath(this.assetsPath);
         const dracoLoader = new DRACOLoader();
-        const fbxLoader = new FBXLoader().setPath(this.assetsPath);
         dracoLoader.setDecoderPath( './libs/three/js/draco/' );
         loader.setDRACOLoader( dracoLoader );
         
@@ -127,7 +126,8 @@ class App{
                             mat1.dispose();
                         }
 					}
-
+                        // Load the FBX model using the FBXLoader
+                        const fbxLoader = new FBXLoader().setPath(self.assetsPath);
                         fbxLoader.load(
                             // FBX model resource URL
                             'model.fbx',
