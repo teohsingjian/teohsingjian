@@ -128,8 +128,6 @@ class App{
                         }
 					}
 
-                        // Load the FBX model using the FBXLoader
-                        const fbxLoader = new FBXLoader().setPath(self.assetsPath);
                         fbxLoader.load(
                             // FBX model resource URL
                             'model.fbx',
