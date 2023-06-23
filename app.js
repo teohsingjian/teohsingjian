@@ -141,7 +141,7 @@ class App{
                                         function (xhr) {
                                             self.loadingBar.progress = (xhr.loaded / xhr.total);
                                         }
-                                    );
+                                    )
 
                                 });
                        
