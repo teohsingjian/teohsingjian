@@ -146,7 +146,7 @@ class App{
                             }
                         );
 
-                            });
+                    });
                        
                 const door1 = college.getObjectByName("LobbyShop_Door__1_");
                 const door2 = college.getObjectByName("LobbyShop_Door__2_");
