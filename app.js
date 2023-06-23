@@ -9,6 +9,7 @@ import { VRButton } from './libs/VRButton.js';
 import { CanvasUI } from './libs/CanvasUI.js';
 import { GazeController } from './libs/GazeController.js'
 import { XRControllerModelFactory } from './libs/three/jsm/XRControllerModelFactory.js';
+import { FBXLoader } from './libs/three/jsm/FBXLoader.js';
 
 class App{
 	constructor(){
@@ -95,6 +96,7 @@ class App{
         
 		const loader = new GLTFLoader( ).setPath(this.assetsPath);
         const dracoLoader = new DRACOLoader();
+        const fbxLoader = new FBXLoader().setPath(this.assetsPath);
         dracoLoader.setDecoderPath( './libs/three/js/draco/' );
         loader.setDRACOLoader( dracoLoader );
         
@@ -125,7 +127,28 @@ class App{
                             mat1.dispose();
                         }
 					}
-				});
+
+                        // Load the FBX model using the FBXLoader
+                        const fbxLoader = new FBXLoader().setPath(self.assetsPath);
+                        fbxLoader.load(
+                            // FBX model resource URL
+                            'model.fbx',
+                            // Called when the FBX model is loaded
+                            function (fbx) {
+                                // Add the FBX model to the scene
+                                self.scene.add(fbx);
+                            },
+                            // Called while loading is progressing
+                            function (xhr) {
+                                self.loadingBar.progress = (xhr.loaded / xhr.total);
+                            },
+                            // Called when loading has errors
+                            function (error) {
+                                console.log('An error happened while loading the FBX model');
+                            }
+                        );
+
+                            });
                        
                 const door1 = college.getObjectByName("LobbyShop_Door__1_");
                 const door2 = college.getObjectByName("LobbyShop_Door__2_");
